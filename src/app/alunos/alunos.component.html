@@ -1,0 +1,32 @@
+<!--Este é o componente que apresenta os alunos listados em uma tabela-->
+<!--Esta tabela é toda formatada usando classes do bootstrap-->
+<div class="container-fluid">
+    <p>
+        <span class="h2">Agenda</span>
+    </p>
+    <table class="table">
+        <thead class="table-dark">
+          <tr>
+              <!--Estes são os títulos da tabela de alunos-->
+            <th scope="col">Nome do Aluno</th>
+            <th scope="col">RU</th>
+            <th scope="col">Curso</th>
+            <th scope="col">Data Nascimento</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let aluno of listaAlunos">
+            <!--ngFor é uma diretiva do Ângular que possibilita percorrer um array.
+                Neste caso, o ngFor percorre o array e atribui cada elemento à variável aluno.
+                A cada iteração, ele imprimirá todos os filhos da tag em que ele estiver declarado.
+                Dessa forma podemos manipular o objeto "aluno" dentro dessa tag, como vemos abaixo.
+            -->
+          <tr>
+            <td>{{ aluno.nome }}</td>
+            <td>{{ aluno.ru }}</td>
+            <td>{{ aluno.nomeCurso }}</td>
+            <td>{{ aluno.dataNascimento }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
